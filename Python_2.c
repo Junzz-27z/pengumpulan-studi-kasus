@@ -53,14 +53,14 @@ int main(){
             break;
         }
         else if (r > baris || c > kolom){
-            printf("Kursi [%d][%d] di luar denah!", r, c);
+            printf("Kursi (%d, %d) di luar denah!\n", r, c);
         }
         else if (denah[r-1][c-1] == 'X') {
-            printf("Kursi [%d][%d] sudah diterisi!", r, c);
+            printf("Kursi (%d, %d) sudah diterisi!\n", r, c);
         }
         else {
             denah[r-1][c-1] = 'X';
-            printf("Kursi [%d][%d] berhasil dipesan!\n", r, c);
+            printf("Kursi (%d, %d) berhasil dipesan!\n", r, c);
             for (int i = 1; i <= kolom; i++) {
                 printf(" %d", i);
             }
