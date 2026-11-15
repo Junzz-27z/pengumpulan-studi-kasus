@@ -1,0 +1,67 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+    char nilaihuruf(int nilai) {
+        if (nilai<0 || nilai>100){
+            printf("invalid");
+        } else if (nilai>=85){
+            printf ("A");
+        } else if (nilai>=75){
+            printf ("B");
+        } else if (nilai>=60){
+            printf("C");
+        } else if (nilai>=45){
+            printf("D");
+        } else {
+            printf("E");
+        }
+    }
+
+int remed(int a){
+    if (a>=75){
+        printf("lulus");
+    } else {
+        printf("remed");
+    }
+}
+
+int hitunglulus(int arr[], int n){
+    int jumlahlulus;
+    
+}
+
+int main () {
+    system ("cls");
+
+    int ulang=0, nilai [40], jumlahlulus=0;
+
+    do{
+        int n;
+        printf ("masukkan jumlah mahasiswa(1-40): ");
+        scanf("%d",&n);
+            if (n>40){
+                printf("invalid\n");
+                ulang=1;
+            } else {
+                ulang=0;
+                int nilai[n];
+                for (int i=0; i<n; i++){
+                printf ("masukkan nilai mahasiswa ke-%d: ", i+1);
+                scanf("%d", &nilai[i]);
+                    if(nilai[i]<0 || nilai[i]>100){
+                    printf("invalid\n");
+                    for(int i=0; i<n; i--);
+                    printf ("masukkan nilai mahasiswa ke-%d: ", i+1);
+                scanf("%d", &nilai[i]);
+                    } else {
+                    }
+                }
+            }
+        
+    } while (ulang==1);
+
+    printf("=== rekap kuis dasar pemrograman (kkm 75) ===\n");
+
+    return 0;
+
+}
